@@ -58,17 +58,26 @@ void sort_data_falling(double data[],
 }
 
 /********************************************************************************
-* print_data: Skriver ut vår array.
+* print_data: Skriver ut vår array med tillhörande rubrik.
 ********************************************************************************/
 void print_data(double data[],
 	            int size)
 {  
+	if (data[0] < data[1])
+	{
+		printf("Rising:\n");
+	}
+	else
+	{
+		printf("Falling:\n");
+	}
+
 	printf("------------------------------------------------------------\n");
 	for (int i = 0; i < size; i++)
 	{
 		printf("%lg\n", data[i]);
 	}
-	printf("------------------------------------------------------------\n");
+	printf("------------------------------------------------------------\n\n");
 
 	return;
 }
